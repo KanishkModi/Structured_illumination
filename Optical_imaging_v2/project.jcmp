@@ -1,0 +1,57 @@
+Project {
+  InfoLevel = 0
+  Electromagnetics {
+    TimeHarmonic {
+      Scattering {
+        FieldComponents = Electric
+        Accuracy {
+          Precision = 1e-2
+        }
+      }
+    }
+  }
+}
+
+#PostProcess {
+#  FourierTransform {
+#    FieldBagPath = "project_results/fieldbag.jcm"
+#    OutputFileName = "project_results/fourier_modes_reflected.jcm"
+#    NormalDirection = Y
+#    Rotation = X:Z:-Y
+#  }
+#}
+
+PostProcess {
+  FourierTransform {
+    FieldBagPath = "project_results/fieldbag.jcm"
+    OutputFileName = "project_results/fourier_modes_transmitted.jcm"
+    NormalDirection = -Y
+    Rotation = X:-Z:Y
+  }
+}
+
+
+PostProcess {
+  OpticalImaging {
+    InputFileName = "./project_results/fourier_modes_transmitted.jcm"
+    OutputFileName = "./project_results/image_ft.jcm"
+    OpticalSystem {
+      NumericalAperture = 0.42
+    }
+  }
+}
+
+
+PostProcess {
+  ExportFields {
+    FieldBagPath = "./project_results/image_ft.jcm"
+    OutputFileName = "./project_results/image_xy.jcm"
+    Cartesian {
+      GridPointsX = [-5e-06 : 1e-07 : 5e-06]
+      GridPointsY = [-5e-06 : 1e-07 : 5e-06]
+      GridPointsZ = 0
+    }
+  }
+}
+
+

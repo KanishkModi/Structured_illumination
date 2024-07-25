@@ -1,0 +1,54 @@
+Layout2D {
+  Name = "LineGrating"
+  UnitOfLength = 1e-07
+  MeshOptions {
+    MaximumSideLength = 20
+  }
+  Objects {
+    Parallelogram {
+      Name = "ComputationalDomain_Air"
+      DomainId = 1
+      Priority = ComputationalDomain
+      Width = 16
+      Height = 12
+      Port = South
+      Boundary {
+        Number = [1 3]
+        Class = Transparent
+      }
+      Boundary {
+        Number = [2 4]
+        Class = Periodic
+      }
+    }
+    
+    Parallelogram {
+      Name = "Substrate"
+      DomainId = 2
+      InnerAngle = 90
+      Width = 16
+      Height = 0.5
+      Port = South
+    }
+    
+    Parallelogram {
+      Name = "Line"
+      DomainId = 3
+      Height = 0.5
+      Width = 2
+      Port = South
+      Alignment {
+        Parent {
+          Domain = "Substrate"
+          Port = North
+        }
+        Orientation = AntiParallel
+      }
+      MeshOptions {
+        CornerRefinement {
+          MaximumSideLength = 1        
+        }
+      } 
+    }
+  }
+}
