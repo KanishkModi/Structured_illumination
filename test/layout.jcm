@@ -1,0 +1,29 @@
+Layout2D {
+  UnitOfLength = 1e-6
+  MeshOptions {
+    MaximumSideLength = 0.4
+  }
+  Objects {    
+    Parallelogram {
+      Height = 5
+      Width = 5
+      DomainId = 1
+      Priority = ComputationalDomain
+      Boundary {
+        Class = Transparent
+      }
+    }
+    Circle {
+#      Port = 1
+      Name = "MySecondObject"
+      DomainId = 2
+      Radius = 1
+#      Width = 2.5
+#      AngleAlpha = 45
+#      AngleBeta = 45
+      RefineAll = 3
+#      RotationAngle = 180
+#      GlobalPosition = [1.25,0.0]
+    }
+  }
+}

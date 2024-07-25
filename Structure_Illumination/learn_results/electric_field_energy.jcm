@@ -1,0 +1,18 @@
+/* <BLOBHead>
+__BLOBTYPE__=Table
+__MODE__=TEXT
+__OPTIONS__=LHExchanged
+__OWNER__=JCMwave
+__TAG__=372a551acd7b02593d5a411a9205bb00
+__VERSION__=1.0.0
+Column1:Name=DomainId
+Column1:Type=int
+Column2:Name=ElectricFieldEnergy_1
+Column2:Type=doublecomplex
+Title=ElectricFieldEnergy
+<I>NColumns=2
+<I>NRows=1
+*/
+# Row 1
+1
+(1.182542949645272e-22,-5.885665458531364e-41)

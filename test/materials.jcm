@@ -1,0 +1,12 @@
+Material {
+  DomainId = 1
+  RelPermeability = 1.0
+  RelPermittivity = 1.0
+}
+Material {
+  Name= "Material"
+  DomainId = 2
+  RelPermeability = 1.0
+  RelPermittivity = 10
+}
+

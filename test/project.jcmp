@@ -1,0 +1,51 @@
+Project {
+  InfoLevel = 3
+  StorageFormat = Binary
+  Electromagnetics {
+    TimeHarmonic {
+      Scattering {
+        Accuracy {
+          Precision = 0.02
+        }
+      }
+    }
+  }
+}
+#PostProcess {
+#  DensityIntegration {
+#    OutputFileName = "./project_results/electric_field_energy.jcm"
+#    FieldBagPath = "./project_results/fieldbag.jcm"
+#    OutputQuantity = ElectricFieldEnergy
+#  }
+#}
+PostProcess {
+  FourierTransform {
+    FieldBagPath = "./project_results/fieldbag.jcm"
+    OutputFileName = "./project_results/fourier_modes.jcm"
+    NormalDirection = -Y
+    Format = JCM-ASCII
+    NumericalAperture = 0.75
+  }
+}
+PostProcess {
+  OpticalImaging {
+    InputFileName = "./project_results/fourier_modes.jcm"
+    OutputFileName = "./project_results/imaging_raw_data.jcm"
+    OpticalSystem {
+      NumericalAperture = 0.75
+      SpotMagnification = 1
+    }
+  }
+}
+PostProcess {
+  ExportFields {
+    FieldBagPath = "./project_results/imaging_raw_data.jcm"
+    OutputFileName = "./project_results/aerial_image.jcm"
+    OutputQuantity = ElectricFieldStrength
+    Cartesian {
+      NGridPointsX = 100
+      GridPointsY = 100
+      NGridPointsZ = 100
+    }
+  }
+}

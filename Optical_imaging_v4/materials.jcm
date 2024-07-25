@@ -1,0 +1,32 @@
+Material {  
+  Name = "ComputationalDomain/Air" 
+  DomainId = 1 
+  RelPermittivity = 1 
+  RelPermeability = 1.0 
+} 
+
+Material {  
+  Name = "Substrate" 
+  DomainId = 2 
+  RelPermittivity {
+    RefractiveIndex {
+      N = 1.4603
+      K = 0
+    }
+  }
+  RelPermeability = 1.0 
+} 
+ 
+Material {  
+  Name = "Line" 
+  DomainId = 3 
+  RelPermittivity {
+    RefractiveIndex {
+      N = 0.204024
+      K = 2.193622
+    }
+  }
+  RelPermeability = 1.0 
+} 
+ 
+ 

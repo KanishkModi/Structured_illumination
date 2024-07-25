@@ -1,0 +1,42 @@
+#SourceBag {
+#  Source {
+#    ElectricFieldStrength {
+#      PlaneWave {
+#        K = [0, -4.05e+06, 0]
+#        Amplitude = [0 0 1]
+#      }
+#    }
+#  }
+#}
+
+#SourceBag {
+#  Source {
+#    ElectricFieldStrength {
+#      PlaneWave {
+#        K = [-4.05e+06, 0, 0]
+#        Amplitude = [0 1 0]
+#      }
+#    }
+#  }
+#}
+#
+SourceBag {
+  Source {
+    ElectricFieldStrength {
+      Python {
+          Expression = "value = exp(1j*dot(k.T, X))*A"
+        
+        Parameter {
+          Name = "k"
+          VectorValue = [0, -4.05e+06, 0]
+          }
+         Parameter {
+           Name = "A"
+           VectorValue = [0 0 1]
+         }
+         Omega = 1.214e+15
+         BlochVector = [4.05e+06 4.05e+06 0.0]
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+Project {
+  InfoLevel = 3
+  StorageFormat = Binary
+  Electromagnetics {
+    TimeHarmonic {
+      Scattering {
+        Accuracy {
+          Precision = 0.02
+        }
+      }
+    }
+  }
+}
+PostProcess {
+  DensityIntegration {
+    OutputFileName = "./learn_results/electric_field_energy.jcm"
+    FieldBagPath = "./learn_results/fieldbag.jcm"
+    OutputQuantity = ElectricFieldEnergy
+  }
+}

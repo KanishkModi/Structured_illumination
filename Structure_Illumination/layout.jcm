@@ -1,0 +1,34 @@
+Layout2D {
+  UnitOfLength = 1e-6
+  MeshOptions {
+    MaximumSideLength = 0.5
+  }
+  Objects {
+    Parallelogram {
+      Height = 5
+      Width = 5
+      DomainId = 1
+      Priority = ComputationalDomain
+      Boundary {
+        Class = Transparent
+      }
+    }
+
+#    Polygon {
+#      Name = "BottomCircle"
+#      DomainId = 2
+#      Priority = 1
+#      Points = [-1 -1,0 -0.5, 1 -1, 0.5 0, 1 1, 0 0.5, -1 1, -0.5 0]
+#      MeshOptions {
+#        MaximumSideLength = 0.3
+#      }
+#    }
+
+#    Circle {
+#      Name = "MySecondObject"
+#      DomainId = 2
+#      Radius = 1
+#      RefineAll = 3
+#    }
+  }
+}

@@ -1,0 +1,19 @@
+Layout2D {
+  UnitOfLength = 1e-6
+  Objects {
+    Ellipse {
+      Name = "MyFirstObject"
+      DomainId = 1
+      RadiusX = 0.1
+      RadiusY = 0.15
+      RefineAll = 4
+    }
+    Triangle {
+      Name = "MySecondObject"
+      DomainId = 2
+      Width = 2.5
+      AngleAlpha = 45
+      AngleBeta = 45
+    }
+  }
+}
