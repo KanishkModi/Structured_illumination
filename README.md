@@ -1,5 +1,5 @@
-# Structured_Illumination
-## Supervisor: Prof. Stefanie Kroker // Guides: Dr. Tim Kaeseberg and Mohammad Nouri
+# Simulation of Structured Illumination Microscopy
+## Supervisor: Prof. Stefanie Kroker <br> Guides: Dr. Tim Kaeseberg and Mohammad Nouri
 
 *All codes are supposed to run on JCM Control App with an official JCM Wave license."
 
