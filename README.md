@@ -1,7 +1,7 @@
 # Simulation of Structured Illumination Microscopy
 ### Supervisor: Prof. Stefanie Kroker <br> Guides: Dr. Tim Kaeseberg and Mohammad Nouri
 
-*All codes are supposed to run on JCM Control App with an official JCM Wave license."
+*All codes are supposed to run on JCM Control app with an official JCM Wave license."
 
 The final codes for the TU Braunschweig summer internship in 2024 are uploaded here:
 - "Optical_imaging_v4" has structured illumination integrated with far-field imaging for a single phase. Using this multiple times (typically 9) should theoretically result in a higher resolution image than standard optical microscopy.
