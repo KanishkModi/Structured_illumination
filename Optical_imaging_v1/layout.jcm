@@ -1,0 +1,57 @@
+Layout2D {
+  UnitOfLength = 1e-9
+  Objects {
+  Parallelogram {
+    Name = "CD"
+    DomainId = 1
+    Priority = -1
+    InnerAngle = 90
+    Width = 10000
+    Height = 1000
+    Port = South
+    BoundarySegment {
+      Number = 1
+      BoundaryClass = Transparent
+    }
+    BoundarySegment {
+      Number = 2
+      BoundaryClass = Transparent
+    }
+    BoundarySegment {
+      Number = 3
+      BoundaryClass = Transparent
+    }
+    BoundarySegment {
+      Number = 4
+      BoundaryClass = Transparent
+    }
+  }
+  Parallelogram {
+    Name = "Substrate"
+    DomainId = 2
+    InnerAngle = 90
+    Width = 10000
+    Height = 100
+    Port = Center
+	RotationAngle = 0
+  }
+  
+
+  Trapezoid {
+    Name = "Line"
+    DomainId = 3
+    Height = 200
+    Width = 1500
+    InnerAngles = [90 90]
+    Port = South
+    Alignment {
+      Parent {
+        Domain = "Substrate"
+        Port = North
+      }
+      Orientation = AntiParallel
+	  Displacement = [0 0]
+    }
+  }
+    
+}
